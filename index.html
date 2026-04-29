@@ -5,59 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <div id="app">
-    <!-- Birthday website content will be rendered here -->
-  </div>
-
   <section class="hero">
     <h1>Happy Birthday, Beautiful! ✨</h1>
     <p>A special surprise for someone truly wonderful.</p>
 
-    <div id="countdown" class="countdown"></div>
-    <div id="birthday-message" class="hidden">It's Your Birthday! 🎉</div>
+    <div id="countdown" class="countdown">
+      <div><span id="days">0</span><small>Days</small></div>
+      <div><span id="hours">0</span><small>Hours</small></div>
+      <div><span id="minutes">0</span><small>Minutes</small></div>
+      <div><span id="seconds">0</span><small>Seconds</small></div>
+    </div>
+
+    <div id="birthday-message" class="hidden">
+      <h2>It's Your Birthday! 🎉</h2>
+    </div>
   </section>
 
-  <section id="wish-section" class="hidden">
+  <section id="wish-section" class="hidden section">
     <h2>Happy Birthday! 💖</h2>
     <p>
       Wishing you a day filled with laughter, love, and endless happiness.
-      You light up every room you enter, and today is all about celebrating
-      the incredible person you are.
+      You light up every room you enter, and today is all about celebrating the incredible person you are.
     </p>
   </section>
 
-  <section id="cake-section" class="hidden">
+  <section id="cake-section" class="hidden section">
     <h2>🎂 Cut the Birthday Cake</h2>
     <div id="cake" class="cake">🎂</div>
     <p id="cake-text">Click the cake to cut it!</p>
   </section>
 
-  <section id="memory-tree" class="hidden">
+  <section id="tree-section" class="hidden section">
     <h2>Memory Tree 🌳</h2>
-    <div class="tree-trunk"></div>
-    <div class="photo-grid" id="photo-grid"></div>
+    <div class="tree">
+      <div class="trunk"></div>
+      <div class="branches"></div>
+      <div class="photos">
+        <img src="images/photo1.jpg" alt="Memory 1">
+        <img src="images/photo2.jpg" alt="Memory 2">
+        <img src="images/photo3.jpg" alt="Memory 3">
+        <img src="images/photo4.jpg" alt="Memory 4">
+        <img src="images/photo5.jpg" alt="Memory 5">
+      </div>
+    </div>
   </section>
 
-  <section id="special-message" class="hidden">
-    <h2>💝 A Special Message For You</h2>
+  <section id="message-section" class="hidden section">
+    <h2>A Special Message For You ❤️</h2>
     <p>
       On your special day, I just want to remind you how amazing you are.
       Your kindness, smile, and beautiful heart make the world a better place.
-      Every moment spent with you becomes a cherished memory. May this year
-      bring you endless joy, exciting adventures, success in everything you do,
+      Every moment spent with you becomes a cherished memory.
+      May this year bring you endless joy, exciting adventures, success,
       and all the love your heart can hold.
+      Keep shining, keep smiling, and never stop being the wonderful person you are.
     </p>
   </section>
 
-  <section id="thank-you" class="hidden">
-    <h2>Thank You ✨</h2>
-    <p>For being such an incredible person and bringing happiness wherever you go.</p>
+  <section id="thankyou-section" class="hidden section">
+    <h2>Thank You 🌸</h2>
+    <p>
+      For being such an incredible person and bringing happiness wherever you go.
+    </p>
     <button onclick="location.reload()">Celebrate Again 🎁</button>
   </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
